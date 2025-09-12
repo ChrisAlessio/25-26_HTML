@@ -7,11 +7,26 @@
 <body>
 <h1>Forms</h1>
 <p>Two major types of forms are known as GET and POST</p>
-Get form
+Examples
 <form action="links.html" method="GET">
-    <input type="text" name="data">
+    <label for="name"> Name: </label><input type="text" name="name" id="name" placeholder="John Doe"><br/>
+    <label for="email">Email: </label><input type ="email" name="email" id="email" placeholder="YourEmail@Domain.com"><br/>
+    <label for="phone">Phone: </label><input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br/>
+    <input type="checkbox" name="emailConsent" id="emailConsent" checked>
+        <label for="emailConsent"> May we send you promotional nonsense?</label><br/>
+    <!-- Radio buttons -->
+    <input type="radio" id="prefEmail" name="contactType" value="email">
+    <label for="prefEmail">Email</label><br/>
+
+    <input type="radio" id="prefSnailMail" name="contactType" value="snailmail">
+    <label for="prefSnailMail">Snail mail</label><br/>
+
+    <input type="radio" id="prefPhone" name="contactType" value="phone">
+    <label for="prefPhone">Phone</label><br/>
+    <!-- End radio buttons -->
     <input type="submit">
 </form>
+<br/>
 Post form
 <form action="links.html" method="POST">
     <input type="text" name="data">
